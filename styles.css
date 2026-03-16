@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-    --primaria: #111827;
-    /* Azul escuro profundo */
-    --secundaria: #1f2937;
-    /* Cinza azul escuro */
-    --destaque: #38BDF8;
-    /* Azul vibrante */
-    --texto: #F8FAFC;
-    /* Branco suave */
-    --texto-secundario: #94A3B8;
-    /* Cinza claro azulado */
+    --primaria: #04070b;
+    /* Preto azulado profundo */
+    --secundaria: #08131d;
+    /* Azul petróleo escuro */
+    --destaque: #00d9ff;
+    /* Ciano neon */
+    --texto: #f5fbff;
+    /* Branco frio */
+    --texto-secundario: #97a9bb;
+    /* Cinza azulado */
 
-    --fundo: #0B1220;
+    --fundo: #02060b;
     /* Fundo quase preto */
-    --fundo-card: #111827;
-    /* Fundo dos cards mais limpo e sóbrio */
+    --fundo-card: #07111a;
+    /* Card escuro com tom azulado */
 
-    --botao-bg: #3b82f6;
-    --botao-hover: #2563eb;
-    --botao-texto: #ffffff;
+    --botao-bg: #00bfe8;
+    --botao-hover: #00d9ff;
+    --botao-texto: #041018;
 
-    --borda: #334155;
-    --sombra-suave: rgba(0, 0, 0, 0.25);
+    --borda: rgba(0, 217, 255, 0.35);
+    --sombra-suave: rgba(0, 0, 0, 0.45);
 
     --sucesso: #22c55e;
     --erro: #ef4444;
@@ -58,7 +58,7 @@ button {
 .navegacao {
     position: fixed;
     top: 0;
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(2, 6, 11, 0.95);
     width: 100%;
     z-index: 100;
     padding: 1.5rem 0;
@@ -112,10 +112,9 @@ button {
 .foto-perfil {
     width: 300px;
     height: 300px;
-    border-radius: 50%;
+    border-radius: 3%;
     border: 4px solid var(--destaque);
-    box-shadow: 0 4px 8px var(--sombra-suave);
-    animation: flutuar 5s ease-in-out infinite;
+    box-shadow: 0 0 18px rgba(0, 217, 255, 0.28), 0 4px 8px var(--sombra-suave);
 }
 
 h1 {
@@ -185,7 +184,7 @@ h1 {
 
 .projetos-card:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 10px 24px var(--sombra-suave);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.16), 0 10px 24px var(--sombra-suave);
 }
 
 .projeto-imagem {
@@ -243,7 +242,7 @@ h1 {
 
 .campo-form:focus {
     border-color: var(--destaque);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.22);
 }
 
 .botao-form {
@@ -257,15 +256,15 @@ h1 {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+    box-shadow: 0 4px 14px rgba(0, 191, 232, 0.2);
 }
 
 .botao-form:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 18px rgba(0, 217, 255, 0.28), 0 10px 24px rgba(0, 0, 0, 0.45);
 }
 
-/* Fundo animado */
+/* Fundo sem animação */
 .particulas {
     position: fixed;
     inset: 0;
@@ -275,45 +274,8 @@ h1 {
     background-color: var(--fundo);
 }
 
-.particulas::before,
-.particulas::after {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent 70%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05), transparent 80%),
-        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03), transparent 70%);
-    animation: fundoAnimado 40s linear infinite;
-    mix-blend-mode: screen;
-    filter: blur(60px);
-    opacity: 0.6;
-}
-
-.particulas::after {
-    animation-direction: reverse;
-    opacity: 0.4;
-    filter: blur(80px);
-}
-
-@keyframes fundoAnimado {
-    0% {
-        transform: translate(-25%, -25%) rotate(0deg);
-    }
-
-    50% {
-        transform: translate(25%, 25%) rotate(180deg);
-    }
-
-    100% {
-        transform: translate(-25%, -25%) rotate(360deg);
-    }
-}
-
-
 /* Animações */
 @keyframes flutuar {
-
     0%,
     100% {
         transform: translateY(0);
@@ -325,7 +287,6 @@ h1 {
 }
 
 @keyframes animarFundo {
-
     0%,
     100% {
         background-position: 0% 50%;
@@ -374,52 +335,50 @@ h1 {
 
 @media (max-width: 768px) {
     .menu-toggle {
-      display: block;
-      background: none;
-      border: none;
-      color: var(--texto);
-      font-size: 2rem;
-      cursor: pointer;
-      position: absolute;
-      top: 1.5rem;
-      right: 2rem;
-      z-index: 101;
+        display: block;
+        background: none;
+        border: none;
+        color: var(--texto);
+        font-size: 2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        z-index: 101;
     }
-  
+
     .menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: var(--secundaria);
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem 0;
-      box-shadow: 0 8px 16px var(--sombra-suave);
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: var(--secundaria);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        box-shadow: 0 8px 16px var(--sombra-suave);
     }
-  
+
     .menu.ativo {
-      display: flex;
+        display: flex;
     }
+
     .botao-projeto {
         display: inline-block;
         margin-top: 10px;
         padding: 10px 16px;
-        background-color: #007bff;
-        color: #fff;
+        background-color: var(--botao-bg);
+        color: var(--botao-texto);
         text-decoration: none;
         border-radius: 8px;
         font-weight: bold;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
-    
-    .botao-projeto:hover {
-        background-color: #0056b3;
-    }
-     
 
+    .botao-projeto:hover {
+        background-color: var(--botao-hover);
+        box-shadow: 0 0 14px rgba(0, 217, 255, 0.22);
+    }
 }
-  
-  
