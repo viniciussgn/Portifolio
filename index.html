@@ -4,185 +4,365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinícius Gonzalez | Desenvolvedor Back-End C# & .NET</title>
+    <meta name="description" content="Portfólio de Vinícius Gonzalez, desenvolvedor back-end especializado em C#, .NET, ASP.NET MVC, SQL Server e APIs REST.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Vinicius Portifolio</title>
 </head>
 
 <body>
 
-    <div class="particulas">
+    <header class="navegacao">
+        <div class="navegacao-container">
+            <a href="#inicio" class="logo">VG<span>.</span></a>
 
-    </div>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"
+                onclick="alternarMenu()">
+                <span class="menu-toggle-linha"></span>
+                <span class="menu-toggle-linha"></span>
+                <span class="menu-toggle-linha"></span>
+            </button>
 
-    <nav class="navegacao">
-        <button class="menu-toggle" aria-label="Abrir Menu"
-            onclick="document.querySelector('.menu').classList.toggle('ativo')">
-            ☰
-        </button>
+            <nav aria-label="Navegação principal">
+                <ul class="menu" id="menu-principal">
+                    <li><a href="#inicio" class="menu-link">Início</a></li>
+                    <li><a href="#sobre" class="menu-link">Sobre</a></li>
+                    <li><a href="#tecnologias" class="menu-link">Tecnologias</a></li>
+                    <li><a href="#experiencia" class="menu-link">Experiência</a></li>
+                    <li><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li><a href="#contato" class="menu-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <ul class="menu">
-            <li>
-                <a href="#inicio" class="menu-link">inicio</a>
-            </li>
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-            <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#contato" class="menu-link">Contato</a>
-            </li>
-        </ul>
-    </nav>
+    <main>
 
-    <main id="inicio" class="cabecalho">
-        <img src="img/perfil.png" alt="Foto-Vinicius-Gonzalez" class="foto-perfil">
-        <h1>Vinícius Gonzalez de Freitas</h1>
-        <p class="cabecalho-sub-titulo">Desenvolvedor de Software | Back-End | .NET | C#</p>
+        <!-- INÍCIO -->
+        <section id="inicio" class="hero">
+            <div class="hero-conteudo">
+                <p class="eyebrow">Olá, seja bem-vindo(a)</p>
+                <h1>VINÍCIUS<br>GONZALEZ</h1>
+                <p class="hero-cargo">Desenvolvedor Back-End<br>C# & .NET</p>
+                <div class="hero-acoes">
+                    <a href="#projetos" class="botao-primario">Projetos</a>
+                    <a href="#contato" class="botao-secundario">Contato</a>
+                </div>
+            </div>
+
+            <div class="hero-ilustracao" aria-hidden="true">
+                <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="210" cy="345" rx="150" ry="14" fill="#0f1720" opacity="0.06"/>
+                    <rect x="55" y="230" width="310" height="14" rx="4" fill="#12202b"/>
+                    <rect x="70" y="244" width="18" height="70" fill="#12202b"/>
+                    <rect x="335" y="244" width="18" height="70" fill="#12202b"/>
+                    <rect x="150" y="140" width="130" height="90" rx="6" fill="#12202b"/>
+                    <rect x="160" y="150" width="110" height="66" rx="3" fill="#0a3b46"/>
+                    <rect x="170" y="160" width="45" height="6" rx="3" fill="#1fd1c9"/>
+                    <rect x="170" y="172" width="70" height="6" rx="3" fill="#1fd1c9" opacity="0.7"/>
+                    <rect x="170" y="184" width="55" height="6" rx="3" fill="#1fd1c9" opacity="0.5"/>
+                    <rect x="170" y="196" width="65" height="6" rx="3" fill="#1fd1c9" opacity="0.3"/>
+                    <rect x="204" y="230" width="22" height="14" fill="#12202b"/>
+                    <ellipse cx="215" cy="248" rx="45" ry="6" fill="#12202b"/>
+                    <rect x="60" y="235" width="70" height="55" rx="4" fill="#0f1720"/>
+                    <rect x="66" y="241" width="58" height="8" rx="2" fill="#1fd1c9"/>
+                    <rect x="66" y="253" width="40" height="8" rx="2" fill="#1fd1c9" opacity="0.6"/>
+                    <circle cx="118" cy="118" r="28" fill="#f3c9a6"/>
+                    <path d="M92 112 Q92 82 118 80 Q146 80 146 112 L146 100 Q118 96 92 100 Z" fill="#12202b"/>
+                    <path d="M85 200 Q80 150 92 118 L146 118 Q158 150 152 200 Z" fill="#12202b"/>
+                    <path d="M92 118 L118 140 L146 118 L136 130 L118 152 L100 130 Z" fill="#1fd1c9"/>
+                    <rect x="70" y="196" width="70" height="40" rx="6" fill="#0f1720"/>
+                    <circle cx="118" cy="216" r="4" fill="#1fd1c9"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="secao secao-escura">
+            <p class="eyebrow eyebrow-centro">Sobre</p>
+            <h2 class="titulo-secao">Sobre mim</h2>
+
+            <div class="sobre-grid">
+                <div class="sobre-texto">
+                    <p>
+                        Formado em <strong>Análise e Desenvolvimento de Sistemas</strong> pela
+                        <strong>UNIP — Universidade Paulista</strong>.
+                    </p>
+                    <p>
+                        Desenvolvedor Back-End focado em <strong>C# e .NET</strong>, construindo
+                        aplicações completas com integração a banco de dados e APIs REST. Já apliquei
+                        na prática conceitos como CRUD, arquitetura MVC, modelagem de dados e boas
+                        práticas de código em projetos como sistema de biblioteca, To-Do List e
+                        controle financeiro.
+                    </p>
+                    <p>
+                        Tenho experiência com ASP.NET MVC, SQL Server e Entity Framework, além de
+                        versionamento com Git/GitHub. Estou em constante evolução, aprofundando
+                        conhecimentos em APIs REST, Clean Code e testes automatizados — em busca da
+                        minha primeira oportunidade como Desenvolvedor Back-End Júnior.
+                    </p>
+                    <p class="sobre-localizacao">📍 Sorocaba — São Paulo</p>
+                    <a href="#contato" class="botao-secundario botao-claro">Contato</a>
+                </div>
+
+                <img src="img/perfil.png" alt="Foto de perfil de Vinícius Gonzalez" class="foto-perfil" width="240" height="240">
+            </div>
+        </section>
+
+        <!-- TECNOLOGIAS -->
+        <section id="tecnologias" class="secao secao-escura">
+            <p class="eyebrow eyebrow-centro">Stack</p>
+            <h2 class="titulo-secao">Tecnologias</h2>
+
+            <div class="tecnologias-grid">
+                <div class="tec-badge">
+                    <span class="tec-icone" style="background:#4a1f7c;">C#</span>
+                    <span>C#</span>
+                </div>
+                <div class="tec-badge">
+                    <span class="tec-icone" style="background:#5c2d91;">.NET</span>
+                    <span>.NET</span>
+                </div>
+                <div class="tec-badge">
+                    <span class="tec-icone" style="background:#00599c;">MVC</span>
+                    <span>ASP.NET MVC</span>
+                </div>
+                <div class="tec-badge">
+                    <span class="tec-icone" style="background:#a91e22; font-size:0.78rem;">SQL</span>
+                    <span>SQL Server</span>
+                </div>
+                <div class="tec-badge">
+                    <span class="tec-icone" style="background:#178600; font-size:0.7rem;">EF</span>
+                    <span>Entity Framework</span>
+                </div>
+                <div class="tec-badge">
+                    <span class="tec-icone" style="background:#e34c26;">&lt;/&gt;</span>
+                    <span>HTML</span>
+                </div>
+                <div class="tec-badge">
+                    <span class="tec-icone" style="background:#264de4;">{ }</span>
+                    <span>CSS</span>
+                </div>
+                <div class="tec-badge">
+                    <span class="tec-icone" style="background:#f0db4f; color:#111;">JS</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tec-badge">
+                    <span class="tec-icone" style="background:#f34f29;">Git</span>
+                    <span>Git & GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIÊNCIA -->
+        <section id="experiencia" class="secao">
+            <p class="eyebrow eyebrow-centro">Trajetória</p>
+            <h2 class="titulo-secao">Experiência</h2>
+
+            <div class="lista-itens">
+                <div class="item-linha">
+                    <span class="item-numero">01</span>
+                    <div class="item-corpo">
+                        <div class="item-cabecalho">
+                            <h3>Operador de Materiais Backflush</h3>
+                            <span class="item-periodo">ago/2024 — atual</span>
+                        </div>
+                        <p class="item-empresa">Flex · Sorocaba, São Paulo</p>
+                        <p class="item-descricao">Atuação com sistemas ERP (BAAN / FlexFlow), controle e movimentação de dados e materiais, apoio a processos logísticos e uso de tecnologia para controle de estoque.</p>
+                    </div>
+                </div>
+
+                <div class="item-linha">
+                    <span class="item-numero">02</span>
+                    <div class="item-corpo">
+                        <div class="item-cabecalho">
+                            <h3>Logistics Assistant</h3>
+                            <span class="item-periodo">nov/2023 — mar/2024</span>
+                        </div>
+                        <p class="item-empresa">VIAMAKER® Education · Sorocaba, São Paulo</p>
+                        <p class="item-descricao">Controle de estoque e acompanhamento de movimentações de materiais, conferência de mercadorias e organização do espaço de armazenamento.</p>
+                    </div>
+                </div>
+
+                <div class="item-linha">
+                    <span class="item-numero">03</span>
+                    <div class="item-corpo">
+                        <div class="item-cabecalho">
+                            <h3>Profissional Autônomo</h3>
+                            <span class="item-periodo">mar/2018 — abr/2022</span>
+                        </div>
+                        <p class="item-empresa">Jeans Shop · Sorocaba, São Paulo</p>
+                    </div>
+                </div>
+
+                <div class="item-linha">
+                    <span class="item-numero">04</span>
+                    <div class="item-corpo">
+                        <div class="item-cabecalho">
+                            <h3>Análise e Desenvolvimento de Sistemas</h3>
+                            <span class="item-periodo">fev/2024 — dez/2025 · Concluído</span>
+                        </div>
+                        <p class="item-empresa">Universidade Paulista (UNIP)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certificacoes">
+                <h3>Certificações</h3>
+                <div class="tags">
+                    <span>Full Stack (Java): Spring Boot, Ionic, UML, Heroku</span>
+                    <span>C# completo e OO: composição, herança, coleções, LINQ e lambda</span>
+                    <span>Funcionalidade Git: controle de versões</span>
+                    <span>Projeto 360º: da concepção à execução</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos" class="secao secao-escura">
+            <p class="eyebrow eyebrow-centro">Portfólio</p>
+            <h2 class="titulo-secao">Projetos</h2>
+
+            <div class="lista-itens">
+                <article class="item-linha item-projeto">
+                    <span class="item-numero">01</span>
+                    <img src="img/moneyflow.png" alt="Captura de tela do projeto Money Flow" class="item-imagem" loading="lazy">
+                    <div class="item-corpo">
+                        <div class="item-cabecalho">
+                            <h3>Money Flow</h3>
+                        </div>
+                        <p class="item-descricao">Gerenciador de finanças pessoais em monorepo, com aplicações Web, Mobile e Desktop compartilhando lógica de negócio.</p>
+                        <div class="tags tags-pequenas">
+                            <span>ASP.NET Core</span><span>.NET 9</span><span>GitHub Actions</span><span>Azure Web App</span>
+                        </div>
+                        <a href="https://github.com/VictorTMendes/projeto-integrado-multidisciplinar.git" target="_blank" rel="noopener noreferrer" class="link-projeto">Ver no GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="item-linha item-projeto">
+                    <span class="item-numero">02</span>
+                    <img src="img/biblioteca.png" alt="Captura de tela do sistema de biblioteca" class="item-imagem" loading="lazy">
+                    <div class="item-corpo">
+                        <div class="item-cabecalho">
+                            <h3>Sistema de Biblioteca</h3>
+                        </div>
+                        <p class="item-descricao">Cadastro de livros e usuários com controle de empréstimos e devoluções, aplicando POO, banco de dados relacional e interfaces desktop.</p>
+                        <div class="tags tags-pequenas">
+                            <span>C#</span><span>Windows Forms</span><span>SQL</span>
+                        </div>
+                        <a href="https://github.com/viniciussgn/BibliotecaUNIP" target="_blank" rel="noopener noreferrer" class="link-projeto">Ver no GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="item-linha item-projeto">
+                    <span class="item-numero">03</span>
+                    <img src="img/ToDoList.png" alt="Captura de tela do projeto To-Do List" class="item-imagem" loading="lazy">
+                    <div class="item-corpo">
+                        <div class="item-cabecalho">
+                            <h3>To-Do List</h3>
+                        </div>
+                        <p class="item-descricao">Lista de tarefas com adição, edição, filtro e exclusão. Backend completo em C# e SQL Server, com layout responsivo.</p>
+                        <div class="tags tags-pequenas">
+                            <span>ASP.NET MVC</span><span>SQL Server</span><span>Bootstrap</span>
+                        </div>
+                        <a href="https://github.com/viniciussgn/ToDoList1.git" target="_blank" rel="noopener noreferrer" class="link-projeto">Ver no GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="item-linha item-projeto">
+                    <span class="item-numero">04</span>
+                    <img src="img/Sem título.png" alt="Captura de tela do site de portfólio" class="item-imagem" loading="lazy">
+                    <div class="item-corpo">
+                        <div class="item-cabecalho">
+                            <h3>Portfólio Interativo</h3>
+                        </div>
+                        <p class="item-descricao">Este site — feito do zero, com navegação fluida, responsividade e integração direta com WhatsApp.</p>
+                        <div class="tags tags-pequenas">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="secao">
+            <p class="eyebrow eyebrow-centro">Contato</p>
+            <h2 class="titulo-secao">Vamos conversar</h2>
+            <p class="contato-subtitulo">Gostou do meu trabalho? Envie uma mensagem ou fale comigo pelos canais abaixo.</p>
+
+            <div class="contato-grid">
+                <div class="contato-info">
+                    <a href="mailto:viniciusggonzalez@gmail.com" class="contato-linha">
+                        <span class="contato-rotulo">E-mail</span>
+                        <span>viniciusggonzalez@gmail.com</span>
+                    </a>
+                    <a href="https://wa.me/5515981190513" target="_blank" rel="noopener noreferrer" class="contato-linha">
+                        <span class="contato-rotulo">WhatsApp</span>
+                        <span>+55 (15) 98119-0513</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/viniciusggonzalez" target="_blank" rel="noopener noreferrer" class="contato-linha">
+                        <span class="contato-rotulo">LinkedIn</span>
+                        <span>/in/viniciusggonzalez</span>
+                    </a>
+                    <a href="https://github.com/viniciussgn" target="_blank" rel="noopener noreferrer" class="contato-linha">
+                        <span class="contato-rotulo">GitHub</span>
+                        <span>/viniciussgn</span>
+                    </a>
+                </div>
+
+                <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+                    <div class="grupo-form">
+                        <label for="nome" class="rotulo-form">Nome</label>
+                        <input type="text" placeholder="Como posso te chamar?" class="campo-form" id="nome" required autocomplete="name">
+                    </div>
+                    <div class="grupo-form">
+                        <label for="mensagem" class="rotulo-form">Mensagem</label>
+                        <textarea placeholder="Conte um pouco sobre o motivo do contato" class="campo-form" id="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="botao-form">Enviar pelo WhatsApp</button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
-    <section id="sobre" class="sobre">
-  <div class="sobre-container">
-    <h2 class="sobre-titulo">Sobre mim</h2>
+    <footer class="rodape">
+        <p>Vinícius Gonzalez — <span id="ano-atual"></span>. Alguns direitos reservados.</p>
+    </footer>
 
-    <div class="sobre-grid">
-      <div class="sobre-card sobre-card-destaque">
-        <h3>Sobre mim</h3>
-        <p>
-          Estudante de Análise e Desenvolvimento de Sistemas, em busca da primeira oportunidade
-          na área de tecnologia. Atualmente dedicado ao aprendizado de linguagens de programação
-          e banco de dados, como C# e SQL, com o objetivo de aplicar esses conhecimentos em
-          projetos reais. Comprometido com o desenvolvimento técnico e interessado em contribuir
-          para soluções eficazes e inovadoras no setor de tecnologia.
-        </p>
-      </div>
-
-      <div class="sobre-card">
-        <h3>Educação</h3>
-        <p>Análise e Desenvolvimento de Sistemas</p>
-        <p>UNIP — Universidade Paulista (Cursando)</p>
-      </div>
-
-      <div class="sobre-card">
-        <h3>Skills</h3>
-        <ul>
-          <li>Lógica de programação</li>
-          <li>Desenvolvimento Back-End</li>
-          <li>Programação Orientada a Objetos</li>
-          <li>Modelagem de Banco de Dados</li>
-          <li>Teste de Software</li>
-          <li>Desenvolvimento de Interfaces Desktop</li>
-          <li>Organização e resolução de problemas</li>
-        </ul>
-      </div>
-
-      <div class="sobre-card">
-        <h3>Ferramentas</h3>
-        <div class="tags">
-          <span>C#</span>
-          <span>.NET</span>
-          <span>ASP.NET MVC</span>
-          <span>SQL Server</span>
-          <span>Entity Framework</span>
-          <span>Windows Forms</span>
-          <span>Visual Studio</span>
-          <span>Git</span>
-          <span>GitHub</span>
-          <span>Pacote Office</span>
-        </div>
-      </div>
-
-      <div class="sobre-card">
-        <h3>Idiomas</h3>
-        <p><strong>Português:</strong> Fluente</p>
-        <p><strong>Inglês:</strong> Básico</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Meus Projetos</h2>
-        <div class="projetos-caixa">
-
-            <div class="projetos-card">
-                <img src="img/Sem título.png" alt="projeto 1" class="projeto-imagem"></img>
-                <div class="caixa-texto-projeto">
-                    <h3 class="info-projetos">💼 Portfólio Interativo</h3>
-                    <p class="paragrafo-projetos-tecnoliga"><b>Tecnologias:</b> HTML, CSS, JavaScript.</p>
-                    <p class="paragrafo-projetos">Criei um site moderno e animado para apresentar minha trajetória como
-                        desenvolvedor. Com visual profissional, navegação fluida, responsividade e integração com
-                        WhatsApp, é meu cartão de visitas no mundo da programação. Tudo feito do zero, com foco em
-                        experiência do usuário e estilo!</p>
-                </div>
-            </div>
-           
-            <div class="projetos-card">
-                <img src="img/moneyflow.png" alt="projeto 2" class="projeto-imagem"></img>
-                <div class="caixa-texto-projeto">
-                    <h3 class="info-projetos">Money Flow</h3>
-                    <p class="paragrafo-projetos-tecnoliga"><b>Tecnologias:</b> JavaScript, CSS, HTML, ASP.NET Core, .NET 9, GitHub Actions, Azure Web App .</p>
-                    <p class="paragrafo-projetos"> Repositório do Money Flow, nosso gerenciador de finanças pessoais. Este projeto é um Monorepo que contém todas as nossas aplicações (Web, Mobile e Desktop) e a lógica compartilhada.</p>
-                    <a href="https://github.com/VictorTMendes/projeto-integrado-multidisciplinar.git" target="_blank" class="botao-projeto">Ver no GitHub</a>
-                </div>
-            </div>
-
-            <div class="projetos-card">
-                <img src="img/biblioteca.png" alt="projeto 3" class="projeto-imagem"></img>
-                <div class="caixa-texto-projeto">
-                    <h3 class="info-projetos">Sistema de Biblioteca</h3>
-                    <p class="paragrafo-projetos-tecnoliga"><b>Tecnologias:</b> C#, Windows Forms, SQL, Banco de Dados Relacional, Programação Orientada a Objetos (POO), Engenharia de Software e Visual Studio.</p>
-                    <p class="paragrafo-projetos">Sistema de Biblioteca desenvolvido em C# com Windows Forms, focado no cadastro de livros e usuários, além do controle de empréstimos e devoluções. O projeto foi criado para aplicar conceitos de POO, banco de dados e desenvolvimento de interfaces desktop.</p>
-                    <a href="https://github.com/viniciussgn/BibliotecaUNIP" target="_blank" class="botao-projeto">Ver no GitHub</a>
-                </div>
-            </div>
-
-            <div class="projetos-card">
-                <img src="img/ToDoList.png" alt="projeto 4" class="projeto-imagem"></img>
-                <div class="caixa-texto-projeto">
-                    <h3 class="info-projetos">📝 To-Do List</h3>
-                    <p class="paragrafo-projetos-tecnoliga"><b>Tecnologias:</b> ASP.NET MVC, C#, SQL Server, HTML, CSS, Bootstrap.</p>
-                    <p class="paragrafo-projetos">Criei um sistema de lista de tarefas com ASP.NET MVC, onde o usuário pode adicionar, editar, filtrar, marcar como concluído e excluir tarefas. Cuidei de toda a parte do backend com C# e SQL Server, além do layout responsivo usando HTML, CSS e Bootstrap</p>
-                    <a href="https://github.com/viniciussgn/ToDoList1.git" target="_blank" class="botao-projeto">Ver no GitHub</a>
-                </div>
-            </div>
-            
-            </div>
-            
-        </div>
-    </section>
-
-    <section id="contato" class="contato">
-        <h2 class="contato-titulo">Entre em contato</h2>
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-            <div class="grupo-form">
-                <textarea placeholder="Nome" class="campo-form" id="nome"></textarea>
-            </div>
-            <div class="grupo-form">
-                <textarea placeholder="Digite Sua Mensagem" class="campo-form" id="mensagem" rows="6"></textarea>
-            </div>
-            <button type="submit" class="botao-form">Enviar whatsapp</button>
-        </form>
-    </section>
     <script>
+        function alternarMenu() {
+            const menu = document.querySelector('.menu');
+            const botao = document.querySelector('.menu-toggle');
+            const aberto = menu.classList.toggle('ativo');
+            botao.setAttribute('aria-expanded', aberto);
+        }
+
+        document.querySelectorAll('.menu-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                document.querySelector('.menu').classList.remove('ativo');
+                document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
+            });
+        });
+
         function enviarWhats(event) {
             event.preventDefault();
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
+            const nome = document.getElementById('nome').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
             const telefone = '5515981190513';
 
-            const texto = `Olá, me chamo  ${nome}, e estou entrando em contato sobre: ${mensagem}`;
+            const texto = `Olá, me chamo ${nome}, e estou entrando em contato sobre: ${mensagem}`;
             const msgFormatada = encodeURIComponent(texto);
 
             const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
 
-            console.log(url);
-
             window.open(url, '_blank');
         }
 
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
     </script>
 
 </body>
